@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.kaza {
+    width: 400px;
+    animation-name: movingKaza;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: linear;
+}
+
+@keyframes movingKaza {
+    0% {
+        left: -60vw;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(10deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+        left: 60vw;
+    }
+}
+body{
+    overflow: hidden;
+    background-image: url(fons.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
